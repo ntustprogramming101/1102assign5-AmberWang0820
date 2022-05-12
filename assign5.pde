@@ -575,7 +575,7 @@ color getTimeTextColor(int frames) {				// Requirement #5
   else if (frames>=3600) colorNumber=(#ffffff);
   else if (frames>=1800) colorNumber=(#ffcc00);
   else if (frames>=600) colorNumber=(#ff6600);
-  else if (frames<599) colorNumber=(#ff0000);
+  else colorNumber=(#ff0000);
 
   return colorNumber;
 }
