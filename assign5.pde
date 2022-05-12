@@ -563,8 +563,8 @@ boolean isHit(float ax, float ay, float aw, float ah, float bx, float by, float 
 }
 
 String convertFramesToTimeString(int frames) {	// Requirement #4
-  frames = floor(gameTimer/60);
-  int mins = frames/60;
+  frames = gameTimer/60;
+  int mins = floor(frames/60);
   int secs = frames%=60;
   return nf(mins, 2) + ":" + nf(secs, 2);
 }
