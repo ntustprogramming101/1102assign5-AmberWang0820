@@ -563,7 +563,7 @@ boolean isHit(float ax, float ay, float aw, float ah, float bx, float by, float 
 }
 
 String convertFramesToTimeString(int frames) {	// Requirement #4
-  frames = gameTimer/60;
+  frames = floor(gameTimer/60);
   int mins = floor(frames/60);
   int secs = frames%60;
   return nf(mins, 2) + ":" + nf(secs, 2);
@@ -572,10 +572,10 @@ String convertFramesToTimeString(int frames) {	// Requirement #4
 color getTimeTextColor(int frames) {				// Requirement #5
   int colorNumber=0;
   if (frames>=7200) colorNumber=(#00ffff);
-  if (frames<7200 && frames>=3600) colorNumber=(#ffffff);
-  if (frames<3600 && frames>=1800) colorNumber=(#ffcc00);
-  if (frames<1800 && frames>=600) colorNumber=(#ff6600);
-  if (frames<600) colorNumber=(#ff0000);
+  if (frames<7140 && frames>=3600) colorNumber=(#ffffff);
+  if (frames<3540 && frames>=1800) colorNumber=(#ffcc00);
+  if (frames<1740 && frames>=600) colorNumber=(#ff6600);
+  if (frames<540) colorNumber=(#ff0000);
 
   return colorNumber;
 }
